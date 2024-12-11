@@ -8,6 +8,7 @@ class RedisClient {
     this.client.on('error', (error) => {
       console.log(`Redis client not connected to server: ${error}`);
     });
+    this.client.connect();
   }
 
   // check connection status and report
